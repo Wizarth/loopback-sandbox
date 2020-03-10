@@ -2,7 +2,7 @@
 
 In separate shells
 * NODE_ENV=backend node server/server.js
-* NODE_END=frontend node server/server.js
+* NODE_ENV=frontend node server/server.js
 * node test.js
 
 ## Explanation
