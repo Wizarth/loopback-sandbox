@@ -30,3 +30,12 @@ boot(app, __dirname, function(err) {
   if (require.main === module)
     app.start();
 });
+
+// Periodically list the number of event handlers attached
+// This breaks abstraction etc etc
+setInterval( function() {
+	var model = app.models.Test;
+	if(model && model._observers && model._observers['after save']) {
+		console.log( '' + model._observers['after save'].length + ' \'after save\' observers');
+	}
+}, 1000 );
